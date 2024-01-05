@@ -1,0 +1,19 @@
+.borderBottomYellow {
+    position: relative;
+    cursor: pointer;
+}
+  
+.borderBottomYellow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+  
+.borderBottomYellow:hover::after {
+    width: 100%;
+}

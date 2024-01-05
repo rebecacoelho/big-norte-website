@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #0701A8;
+  --secondary-yellow: #EACB03;
+}
+
+body {
+  background-color: #fff;
+}
