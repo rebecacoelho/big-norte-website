@@ -9,9 +9,6 @@ export default function Servicos() {
   return (
     <>
       <Header />
-      <div className='flex justify-center py-10 text-black'>
-        <h1 className='font-bold text-4xl'>SERVIÇOS</h1>
-      </div>
       <ServicesSection />
       <Reboque />
       <ContactSection />

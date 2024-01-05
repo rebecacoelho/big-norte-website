@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaTools, FaDumpster, FaClipboardCheck, FaBroom } from 'react-icons/fa';
 import { FaToiletPortable, FaTruckDroplet } from 'react-icons/fa6';
 import Image from 'next/image';
@@ -9,6 +9,7 @@ import Fossas from '../../../public/fossa.jpeg'
 import Pipa from '../../../public/pipa.png'
 import Higienizacao from '../../../public/higienizacao.jpeg'
 import Estacionaria from '../../../public/estacionaria.jpeg'
+import { motion } from 'framer-motion';
 
 const Square = ({ Icon, text, onClick }: any) => {
   return (
@@ -28,6 +29,8 @@ const ServicesSection = () => {
     image: Equipamentos
   });
 
+  const [isMounted, setIsMounted] = useState(false);
+
   const handleSquareClick = (title: string, subtitle: string, image: any) => {
     setSelectedContent({
       title,
@@ -36,7 +39,28 @@ const ServicesSection = () => {
     });
   };
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+  };
+
   return (
+  <motion.div
+    initial='hidden'
+    animate={isMounted ? 'visible' : 'hidden'}
+    variants={headerVariants}
+  >
+    <div className='flex justify-center py-10 text-black'>
+        <h1 className='font-bold text-4xl'>SERVIÇOS</h1>
+    </div>
     <div className='py-10 bg-light-grey'>
     <div className="flex flex-col lg:flex-row items-center justify-center">
       <div className='max-w-sm bg-white flex flex-col p-8'>
@@ -84,6 +108,7 @@ const ServicesSection = () => {
         </div>
       </div>
     </div>
+  </motion.div>
   );
 };
 
