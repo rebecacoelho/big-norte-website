@@ -46,6 +46,9 @@ const Footer = () => {
         <Link href='/contato'>
           <span className={styles.borderBottomWhite}>Contate-nos</span>
         </Link>
+        <Link href='https://beacons.ai/bignorte' target='_blank'>
+          <span className={styles.borderBottomWhite}>Saiba Mais</span>
+        </Link>
       </div>
       <div className='text-white mt-4 text-center px-4 md:mt-0'>
         <span>@ Copyright Big Norte 2023 – Developed by Rebeca Coelho</span>

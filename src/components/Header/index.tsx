@@ -54,6 +54,9 @@ const Header = () => {
           <Link href='/contato'>
             <span className='border-b-2 border-transparent hover:border-secondary-yellow'>Contate-nos</span>
           </Link>
+          <Link href='https://beacons.ai/bignorte' target='_blank'>
+            <span className='border-b-2 border-transparent hover:border-secondary-yellow'>Saiba Mais</span>
+          </Link>
         </div>
       </div>
       <div className='lg:hidden'>
@@ -78,6 +81,9 @@ const Header = () => {
           </Link>
           <Link href='/contato'>
             <span className='text-secondary-yellow py-4 cursor-pointer'>Contate-nos</span>
+          </Link>
+          <Link href='https://beacons.ai/bignorte' target='_blank'>
+            <span className='text-secondary-yellow py-4 cursor-pointer'>Saiba Mais</span>
           </Link>
         </div>
       </div>

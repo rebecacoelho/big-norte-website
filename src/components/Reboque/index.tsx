@@ -1,6 +1,7 @@
 import React from 'react';
 import ReboqueImg from '../../../public/reboque.jpeg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Reboque = () => {
   return (
@@ -18,9 +19,11 @@ const Reboque = () => {
           <p>Somos sua escolha confiável para assistência em reboque e auto socorro em São Luís. Nossa equipe experiente está pronta para atender suas necessidades de transporte de veículos de forma rápida e eficiente. Sua segurança é nossa prioridade. Conte conosco para solucionar problemas com seu veículo. Além disso, a Big Norte garante que você tenha a assistência de que precisa.</p>
         </div>
         <div className='pt-6 md:pt-10'>
-          <button className='bg-primary-blue p-3 md:p-4 rounded-xl transition duration-300 ease-in-out hover:bg-blue-800'>
-            <span className='text-secondary-yellow'>Entre em contato</span>
-          </button>
+          <Link href='https://beacons.ai/bignorte' target='_blank'>
+            <button className='bg-primary-blue p-3 md:p-4 rounded-xl transition duration-300 ease-in-out hover:bg-blue-800'>
+              <span className='text-secondary-yellow'>Entre em contato</span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
